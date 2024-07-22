@@ -13,7 +13,7 @@ export class MessageConfigurationComponent {
   @Input({ required: true }) message!: string;
   readonly modal = inject(NgbActiveModal);
 
-  onSave() {
+  onSubmit() {
     this.modal.close(this.message);
   }
 
