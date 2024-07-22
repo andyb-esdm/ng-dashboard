@@ -1,3 +1,8 @@
 <div class="alert alert-info">
-    {{ message }}
+    <div class="d-flex justify-content-between">
+        <div>
+            {{ message }}
+        </div>
+        <button class="btn btn-sm btn-secondary" (click)="onConfigure()">Configure</button>
+    </div>
 </div>
