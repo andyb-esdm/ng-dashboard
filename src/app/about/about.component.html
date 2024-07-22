@@ -1,1 +1,6 @@
-<p>about works!</p>
+@if(content$ | async; as content) {
+    <div [innerHTML]="content"></div>
+}
+@else {
+    <div>Content for {{contentKey}} not found.</div>
+}
