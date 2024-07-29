@@ -1,0 +1,12 @@
+<div class="border border-secondary rounded bg-secondary-subtle p-2 h-100">
+    <div class="mb-2">
+        <label [for]="'width-' + config.id" class="form-label">Width</label>
+        <input type="number" [value]="config.width" (change)="onChangeWidth($event)" name="width"
+            [id]="'width-' + config.id" class="form-control">
+    </div>
+    <div>
+        <label [for]="'height-' + config.id" class="form-label">Height</label>
+        <input type="number" [value]="config.height" (change)="onChangeHeight($event)" name="height"
+            [id]="'height-' + config.id" class="form-control">
+    </div>
+</div>

@@ -10,10 +10,14 @@ export const routes: Routes = [
     },
     {
         path: 'dashboard',
-        loadComponent: () => import('./dashboard/dashboard.component').then(m => m.DashboardComponent), title: 'About'
+        loadComponent: () => import('./dashboard/dashboard.component').then(m => m.DashboardComponent), title: 'Dashboard'
+    },
+    {
+        path: 'grid',
+        loadComponent: () => import('./grid/grid.component').then(m => m.GridComponent), title: 'Grid'
     },
     {
         path: '**',
-        loadComponent: () => import('./not-found/not-found.component').then(m => m.NotFoundComponent), title: 'About'
+        loadComponent: () => import('./not-found/not-found.component').then(m => m.NotFoundComponent), title: 'Not Found'
     },
 ];

@@ -17,6 +17,7 @@ export class NavComponent {
   readonly links = [
     { title: 'Home', fragment: 'home' },
     { title: 'Dashboard', fragment: 'dashboard' },
+    { title: 'Grid', fragment: 'grid' },
     { title: 'About', fragment: 'about' },
   ];
 

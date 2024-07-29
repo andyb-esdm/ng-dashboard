@@ -1,0 +1,38 @@
+.grid {
+    padding: 0.5rem;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-col-span-1 {
+    grid-column: span 1;
+}
+
+.grid-col-span-2 {
+    grid-column: span 2;
+}
+
+.grid-col-span-3 {
+    grid-column: span 3;
+}
+
+.grid-col-span-4 {
+    grid-column: span 4;
+}
+
+.grid-row-span-1 {
+    grid-row: span 1;
+}
+
+.grid-row-span-2 {
+    grid-row: span 2;
+}
+
+.grid-row-span-3 {
+    grid-row: span 3;
+}
+
+.grid-row-span-4 {
+    grid-row: span 4;
+}

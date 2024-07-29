@@ -1,0 +1,7 @@
+<h2>Grid</h2>
+<div class="grid">
+    @for(item of gridItems; track item.id; ) {
+        <app-grid-item [ngClass]="getItemClasses(item)" [config]="item"
+            (configChange)="onConfigChange($event)"></app-grid-item>
+    }
+</div>
