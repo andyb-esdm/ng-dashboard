@@ -1,6 +1,6 @@
 import { Component, inject, Input } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-message-configuration',
@@ -17,5 +17,4 @@ export class MessageConfigurationComponent {
     this.modal.close(this.message);
   }
 
-} import { FormsModule } from '@angular/forms';
-
+}
