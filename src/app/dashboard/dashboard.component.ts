@@ -1,5 +1,4 @@
-import { Component, ComponentRef, inject, ViewContainerRef } from '@angular/core';
-import { MessageComponent } from '../message/message.component';
+import { Component, inject, ViewContainerRef } from '@angular/core';
 
 @Component({
   selector: 'app-dashboard',
