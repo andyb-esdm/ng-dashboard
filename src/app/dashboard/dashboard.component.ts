@@ -1,4 +1,5 @@
 import { Component, ComponentRef, inject, ViewContainerRef } from '@angular/core';
+import { MessageComponent } from '../message/message.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,13 +10,25 @@ import { Component, ComponentRef, inject, ViewContainerRef } from '@angular/core
 })
 export class DashboardComponent {
   viewContainerRef = inject(ViewContainerRef);
-  async onLoadComponent() {
+  // async onLoadComponent() {
+  //   this.viewContainerRef.clear();
+  //   const { MessageComponent } = await import('../message/message.component');
+  //   const componentRef = this.viewContainerRef.createComponent(MessageComponent);
+  //   if (componentRef) {
+  //     componentRef.setInput('message', 'this message was set by the dashboard');
+  //   }
+  // }
+
+  onLoadComponent() {
     this.viewContainerRef.clear();
-    const { MessageComponent } = await import('../message/message.component');
-    const componentRef = this.viewContainerRef.createComponent(MessageComponent);
-    if (componentRef) {
-      componentRef.setInput('message', 'this message was set by the dashboard');
-    }
+    import('../message/message.component').then(({ MessageComponent }) => {
+      const componentRef = this.viewContainerRef.createComponent(MessageComponent);
+      if (componentRef) {
+        componentRef.setInput('message', 'this message was set by the dashboard');
+      }
+    }).catch(error => {
+      console.error('Error loading the component', error)
+    });
   }
 
   onRemoveComponent() {
